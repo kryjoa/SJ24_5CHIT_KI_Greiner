@@ -1,0 +1,94 @@
+﻿@page "/"
+@using Visualisierung_BlazorApp.Services
+@inject SerialPortService SerialPortService
+@rendermode InteractiveServer
+
+<div class="container my-5">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h3 class="card-title">SerialPort Test</h3>
+
+            <hr />
+
+            @if (!string.IsNullOrEmpty(sensorData))
+            {
+                <p><strong>Letzte Messung:</strong> @DateTime.Now</p>
+                <p>@sensorData</p>
+            }
+            else
+            {
+                <p class="text-muted">Keine Daten empfangen...</p>
+            }
+
+            <div class="mt-4">
+                <button class="btn btn-primary me-2" @onclick="SendRestart">Restart</button>
+                <button class="btn btn-success me-2" @onclick="SendAck">ACK senden</button>
+                <button class="btn btn-warning" @onclick="ToggleFan">
+                    @(isFanOn ? "Lüfter ausschalten" : "Lüfter einschalten")
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string? sensorData;
+    private string receiveBuffer = "";
+    private bool isFanOn = false;
+
+    protected override void OnInitialized()
+    {
+        SerialPortService.OnDataReceived += SerialPortService_OnDataReceived;
+    }
+
+    private void SerialPortService_OnDataReceived(string data)
+    {
+        // Hänge die neuen Daten an den Puffer an
+        receiveBuffer += data;
+
+        // Suche im Puffer nach dem ETX-Zeichen (Ende der Nachricht, \x03)
+        int etxIndex = receiveBuffer.IndexOf('\x03');
+        if (etxIndex != -1)
+        {
+            // Extrahiere die komplette Nachricht (inklusive ETX)
+            var completeMessage = receiveBuffer.Substring(0, etxIndex + 1);
+
+            // Entferne STX (\x02), ETX (\x03) und überflüssige Steuerzeichen
+            var cleanedData = completeMessage.Trim('\x02', '\x03', '\r', '\n');
+            sensorData = cleanedData;
+
+            // Entferne den verarbeiteten Teil aus dem Puffer
+            receiveBuffer = receiveBuffer.Substring(etxIndex + 1);
+
+            // UI aktualisieren
+            InvokeAsync(StateHasChanged);
+        }
+    }
+
+    private void SendAck()
+    {
+        SerialPortService.WriteData("\x06");
+    }
+
+    private void ToggleFan()
+    {
+        if (!isFanOn)
+        {
+            // Kommando zum Einschalten des Lüfters
+            SerialPortService.WriteData("e");
+            isFanOn = true;
+        }
+        else
+        {
+            // Kommando zum Ausschalten des Lüfters
+            SerialPortService.WriteData("a");
+            isFanOn = false;
+        }
+    }
+
+    private void SendRestart()
+    {
+        // Kommando zum Neustart
+        SerialPortService.WriteData("r");
+    }
+}

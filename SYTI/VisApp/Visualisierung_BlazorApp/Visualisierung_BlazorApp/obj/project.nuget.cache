@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "kGqcoA/vpJI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Moritz Greiner\\Desktop\\Schule\\5CHIT\\SYTI\\Visualisierung_BlazorApp\\Visualisierung_BlazorApp\\Visualisierung_BlazorApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.android-arm.runtime.native.system.io.ports\\9.0.3\\runtime.android-arm.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.android-arm64.runtime.native.system.io.ports\\9.0.3\\runtime.android-arm64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.android-x64.runtime.native.system.io.ports\\9.0.3\\runtime.android-x64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.android-x86.runtime.native.system.io.ports\\9.0.3\\runtime.android-x86.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\9.0.3\\runtime.linux-arm.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\9.0.3\\runtime.linux-arm64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.linux-bionic-arm64.runtime.native.system.io.ports\\9.0.3\\runtime.linux-bionic-arm64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.linux-bionic-x64.runtime.native.system.io.ports\\9.0.3\\runtime.linux-bionic-x64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.linux-musl-arm.runtime.native.system.io.ports\\9.0.3\\runtime.linux-musl-arm.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.linux-musl-arm64.runtime.native.system.io.ports\\9.0.3\\runtime.linux-musl-arm64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.linux-musl-x64.runtime.native.system.io.ports\\9.0.3\\runtime.linux-musl-x64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\9.0.3\\runtime.linux-x64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.maccatalyst-arm64.runtime.native.system.io.ports\\9.0.3\\runtime.maccatalyst-arm64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.maccatalyst-x64.runtime.native.system.io.ports\\9.0.3\\runtime.maccatalyst-x64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.native.system.io.ports\\9.0.3\\runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\9.0.3\\runtime.osx-arm64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\9.0.3\\runtime.osx-x64.runtime.native.system.io.ports.9.0.3.nupkg.sha512",
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\system.io.ports\\9.0.3\\system.io.ports.9.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
